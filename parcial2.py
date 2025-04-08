@@ -95,6 +95,15 @@ plt.legend(loc='lower right')
 plt.grid()
 plt.show()
 
+
+import joblib
+
+# Guardar modelo, escalador, imputador y label encoder
+joblib.dump(best_svm, 'best_svm_model.pkl')
+joblib.dump(scaler, 'scaler.pkl')
+joblib.dump(imputer, 'imputer.pkl')
+joblib.dump(label_encoder, 'label_encoder.pkl')
+
 """DecisionTreeClassifier"""
 
 import pandas as pd
