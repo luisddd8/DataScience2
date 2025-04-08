@@ -1,13 +1,19 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import joblib
+import pickle
 
-# Cargar modelos
-model = joblib.load('best_svm_model.pkl')
-scaler = joblib.load('scaler.pkl')
-imputer = joblib.load('imputer.pkl')
-label_encoder = joblib.load('label_encoder.pkl')
+with open('best_svm_model.pkl', 'rb') as model_file:
+    model = pickle.load(model_file)
+
+with open('scaler.pkl', 'rb') as scaler_file:
+    scaler = pickle.load(scaler_file)
+
+with open('imputer.pkl', 'rb') as imputer_file:
+    imputer = pickle.load(imputer_file)
+
+with open('label_encoder.pkl', 'rb') as label_encoder_file:
+    label_encoder = pickle.load(label_encoder_file)
 
 st.title("Clasificador de Vehículos")
 st.write("Este modelo predice el tipo de vehículo (van, saab, bus, opel) usando 18 atributos.")
