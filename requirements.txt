@@ -1,9 +1,9 @@
-streamlit==1.32.2
-pandas==1.5.3
-numpy==1.21.6
-scikit-learn==1.3.2
-joblib==1.2.0
+streamlit
+pandas
+numpy
+scikit-learn
+joblib
 pickle
-matplotlib==3.7.1
+matplotlib
 
 
