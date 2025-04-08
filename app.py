@@ -38,3 +38,4 @@ if st.button("Predecir"):
     probs = model.predict_proba(input_scaled)[0]
     for i, prob in enumerate(probs):
         st.write(f"{label_encoder.classes_[i]}: {prob:.2%}")
+
